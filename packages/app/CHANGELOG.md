@@ -1,5 +1,16 @@
 # @hyperdx/app
 
+## 2.30.0
+
+### Patch Changes
+
+- 555d88a: Fix "Add to Filters" on a value inside parsed JSON from a String column (for example `Body`) building invalid SQL. The `JSONExtractString(...)` expression the JSON viewer produces is now passed through unchanged instead of being mis-parsed as a dot-form Map sub-key and mangled into a query ClickHouse rejects.
+- 392a774: Hide the left nav feedback control entirely when the nav is collapsed, since the thumbs up/down icons were not usable in that state.
+- 1838a58: fix: brings back sessions source validation that was mysteriously deleted
+- d1802e1: feat(trace): add a trace minimap above the waterfall
+- Updated dependencies [abf5b53]
+  - @hyperdx/api@2.30.0
+
 ## 2.29.0
 
 ### Minor Changes
